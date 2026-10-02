@@ -33,7 +33,7 @@ export const whiteboardMembers = pgTable(
     whiteboardId: uuid("whiteboard_id")
       .notNull()
       .references(() => whiteboard.id),
-    userId: uuid("user_id")
+    userId: text("user_id")
       .notNull()
       .references(() => user.id),
 
